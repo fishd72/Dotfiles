@@ -1,0 +1,17 @@
+export JAVA_HOME="/usr/lib/jvm/jdk-11.0.2"
+export PATH="$PATH:$JAVA_HOME/bin"
+export M2_HOME="/home/franciscosicardi/apache-maven-3.5.2"
+export M2="$M2_HOME/bin"
+export PATH="$PATH:$M2_HOME/bin"
+export MAVEN_OPTS="-Xms256m -Xmx512m"
+export PATH=$PATH:~/.local/bin
+export SPARK_HOME="/opt/spark-2.3.2-bin-hadoop2.7"
+export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.7-src.zip:$PYTHONPATH
+export PATH=$PATH:$SPARK_HOME/bin
+export PYSPARK_DRIVER_PYTHON=jupyter
+export PYSPARK_DRIVER_PYTHON_OPTS=lab
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
