@@ -20,3 +20,5 @@ My personal dotfiles and configuration files.
     - .vim/
 - Git
     - .gitconfig
+- Terminator
+    - .config/terminator/config

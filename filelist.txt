@@ -1,0 +1,10 @@
+.bashrc
+.bash_env
+.bash_aliases
+.bash_logout
+.inputrc
+.profile
+.vimrc
+.vim
+.gitconfig
+.config/terminator/config
