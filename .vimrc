@@ -13,7 +13,7 @@ let g:autofmt_autosave = 1
 set showcmd
 set showmatch
 set incsearch
-set nohlsearch
+set hlsearch
 set number
 set wildmenu
 set nomodeline
@@ -30,3 +30,4 @@ set history=200
 set nrformats=
 
 map Y y$
+nnoremap <leader><space> :nohlsearch<CR>
