@@ -7,3 +7,4 @@ ln -s ~/Dotfiles/.inputrc ~/
 ln -s ~/Dotfiles/.profile ~/
 ln -s ~/Dotfiles/.vimrc ~/
 ln -s ~/Dotfiles/.vim ~/
+ln -s ~/Dotfiles/.gitconfig ~/

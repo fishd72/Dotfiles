@@ -1,0 +1,6 @@
+[user]
+	email = francisco.sicardi@despegar.com
+	name = Francisco Sicardi
+	signingkey = ADFF993E7A7792A6
+[commit]
+	gpgsign = true
