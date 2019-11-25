@@ -8,6 +8,7 @@ endif
 
 if has("autocmd")
   filetype plugin indent on
+  " move cursor to where you left
   :au BufReadPost *
 	 \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
 	 \ |   exe "normal! g`\""
@@ -30,6 +31,7 @@ set laststatus=2
 set novisualbell
 set cmdheight=2
 set shiftwidth=4
+set tabstop=4
 set softtabstop=4
 set expandtab
 set history=200
@@ -44,3 +46,4 @@ let g:gruvbox_italic = 1
 
 set background=dark
 colorscheme gruvbox
+hi Normal guibg=NONE ctermbg=NONE

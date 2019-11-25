@@ -4,7 +4,6 @@
 .bash_logout
 .inputrc
 .profile
-.vimrc
 .vim
 .gitconfig
 .config/terminator/config
