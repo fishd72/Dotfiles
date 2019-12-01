@@ -7,3 +7,9 @@
 [submodule ".vim/pack/plugins/start/YouCompleteMe"]
 	path = .vim/pack/plugins/start/YouCompleteMe
 	url = git@github.com:tpope/vim-sensible.git
+[submodule ".vim/pack/plugins/start/syntastic"]
+	path = .vim/pack/plugins/start/syntastic
+	url = git@github.com:vim-syntastic/syntastic.git
+[submodule ".vim/pack/plugins/start/vim-surround"]
+	path = .vim/pack/plugins/start/vim-surround
+	url = git@github.com:tpope/vim-surround.git
