@@ -2,9 +2,21 @@ runtime! debian.vim
 
 let mapleader = "-"
 
-if has("syntax")
-  syntax on
-endif
+
+" --- Custom Mappings ---
+map Y y$
+nnoremap <CR> o<ESC>
+
+
+" --- UI ---
+set number
+set cmdheight=2
+set ruler
+set laststatus=2
+set showcmd
+set showmatch
+set wildmenu
+set lazyredraw
 
 if has("autocmd")
   filetype plugin indent on
@@ -15,30 +27,31 @@ if has("autocmd")
 	 \ | endif
 endif
 
-let g:autofmt_autosave = 1
 
-set showcmd
-set showmatch
+" --- Search ---
 set incsearch
 set hlsearch
-set number
-set wildmenu
-set nomodeline
-set autoindent
-set nostartofline
-set ruler
-set laststatus=2
-set novisualbell
-set cmdheight=2
+
+
+" --- Spaces, tabs and indentation ---
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab
-set history=200
-set nrformats=
+set autoindent
 
-map Y y$
-nnoremap <leader><space> :nohlsearch<CR>
+
+" --- Folding ---
+set foldenable
+set foldlevelstart=15
+set foldnestmax=10
+set foldmethod=indent
+
+
+" --- Colors and theme ---
+if has("syntax")
+  syntax on
+endif
 
 let g:gruvbox_bold = 1
 let g:gruvbox_underline = 1
@@ -47,3 +60,10 @@ let g:gruvbox_italic = 1
 set background=dark
 colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
+
+
+" --- Misc ---
+set nomodeline
+set nostartofline
+set novisualbell
+set history=200
