@@ -1,12 +1,9 @@
-[submodule ".vim/pack/plugins/start/rust.vim"]
-	path = .vim/pack/plugins/start/rust.vim
-	url = https://github.com/rust-lang/rust.vim
 [submodule ".vim/pack/default/start/gruvbox"]
 	path = .vim/pack/default/start/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
 [submodule ".vim/pack/plugins/start/YouCompleteMe"]
 	path = .vim/pack/plugins/start/YouCompleteMe
-	url = git@github.com:tpope/vim-sensible.git
+	url = git@github.com:ycm-core/YouCompleteMe.git
 [submodule ".vim/pack/plugins/start/syntastic"]
 	path = .vim/pack/plugins/start/syntastic
 	url = git@github.com:vim-syntastic/syntastic.git
@@ -16,3 +13,9 @@
 [submodule ".vim/pack/plugins/start/vim-repeat"]
 	path = .vim/pack/plugins/start/vim-repeat
 	url = git@github.com:tpope/vim-repeat.git
+[submodule ".vim/pack/plugins/start/vim-magnum"]
+	path = .vim/pack/plugins/start/vim-magnum
+	url = git@github.com:glts/vim-magnum.git
+[submodule ".vim/pack/plugins/start/vim-radical"]
+	path = .vim/pack/plugins/start/vim-radical
+	url = git@github.com:glts/vim-radical.git
