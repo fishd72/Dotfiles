@@ -16,3 +16,6 @@
 [submodule ".vim/pack/plugins/start/vim-gutentags"]
 	path = .vim/pack/plugins/start/vim-gutentags
 	url = git@github.com:ludovicchabant/vim-gutentags.git
+[submodule ".vim/pack/plugins/start/VimCompletesMe"]
+	path = .vim/pack/plugins/start/VimCompletesMe
+	url = git@github.com:ajh17/VimCompletesMe.git
