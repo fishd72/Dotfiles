@@ -41,6 +41,10 @@ set incsearch
 set hlsearch
 
 
+" --- Autocomplete ---
+set completeopt+=longest
+
+
 " --- Spaces, tabs and indentation ---
 set shiftwidth=4
 set tabstop=4
@@ -63,19 +67,19 @@ endif
 
 let g:gruvbox_bold = 1
 let g:gruvbox_underline = 1
-let g:gruvbox_italic = 1
+let g:gruvbox_italic = 0
+let g_gruvbox_contrast_dark='hard'
 
 set background=dark
 colorscheme gruvbox
-hi Normal guibg=NONE ctermbg=NONE
 
 
 " --- Plugins ---
-" Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
 endif
 
+let g:gutentags_cache_dir = '~/.tags'
 
 " --- Misc ---
 set nomodeline
