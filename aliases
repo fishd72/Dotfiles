@@ -19,21 +19,14 @@ then
 fi
 
 alias youtube-dl='yt-dlp'
-
-if [ -f "/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code" ]
-then
-    alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
-fi
-
-if [ -f "/usr/local/bin/fastfetch" ]
-then
-    alias neofetch='/usr/local/bin/fastfetch'
-fi
+alias code="/usr/local/bin/codium"
+alias neofetch='/usr/local/bin/fastfetch'
 
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
-alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
+alias ls='ls --color'
+alias ll='ls -lA'                 # Preferred 'ls' implementation
 alias la='ls -A'
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
@@ -219,3 +212,25 @@ pstrip() {
 	openssl smime -inform DER -verify -in $1 -noverify -out $2 | plutil -convert xml1 $2
 }
 
+# Functions for pandoc
+alias md2word=md2word
+function md2word () {
+    PANDOC_INSTALLED=$(pandoc --version >> /dev/null; echo $?)
+
+    if [ "0" == ${PANDOC_INSTALLED} ]; then
+        pandoc -o $2 -f markdown -t docx $1
+    else
+        echo "Pandoc is not installed. Unable to convert document."
+    fi
+}
+
+alias md2pdf=md2pdf
+function md2pdf () {
+    PANDOC_INSTALLED=$(pandoc --version >> /dev/null; echo $?)
+
+    if [ "0" == ${PANDOC_INSTALLED} ]; then
+        pandoc -o $2 -f markdown -t pdf $1
+    else
+        echo "Pandoc is not installed. Unable to convert document."
+    fi
+}

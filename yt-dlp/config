@@ -1,0 +1,4 @@
+-S ext:mp4:m4a
+
+# Save all videos under YouTube directory in your home directory
+-o ~/Movies/%(title)s.%(ext)s

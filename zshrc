@@ -2,10 +2,9 @@
 # .zshrc
 #
 
-# Colors.
-#unset LSCOLORS
-#export CLICOLOR=1
-#export CLICOLOR_FORCE=1
+bindkey -v
+
+export KEYTIMEOUT=1
 
 # Include alias file (if present) containing aliases for ssh, etc.
 if [ -f ~/.aliases ]
@@ -80,32 +79,20 @@ fi
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+HISTDUP=erase
+setopt appendhistory
+setopt hist_ignore_space
 setopt EXTENDED_HISTORY          # write the history file in the ":start:elapsed;command" format.
 setopt HIST_REDUCE_BLANKS        # remove superfluous blanks before recording entry.
 setopt SHARE_HISTORY             # share history between all sessions.
 setopt HIST_IGNORE_ALL_DUPS      # delete old recorded entry if new entry is a duplicate.
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
-# Function for pandoc
-alias md2word=md2word
-function md2word () {
-    PANDOC_INSTALLED=$(pandoc --version >> /dev/null; echo $?)
-
-    if [ "0" == ${PANDOC_INSTALLED} ]; then
-        pandoc -o $2 -f markdown -t docx $1
-    else
-        echo "Pandoc is not installed. Unable to convert document."
-    fi
-}
-alias md2pdf=md2pdf
-function md2pdf () {
-    PANDOC_INSTALLED=$(pandoc --version >> /dev/null; echo $?)
-
-    if [ "0" == ${PANDOC_INSTALLED} ]; then
-        pandoc -o $2 -f markdown -t pdf $1
-    else
-        echo "Pandoc is not installed. Unable to convert document."
-    fi
-}
+# Keybindings
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
 
 # Include local config if present
 if [ -f ~/.zshrc_local ]; then
@@ -119,3 +106,7 @@ then
 else
     source ~/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"

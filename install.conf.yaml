@@ -2,6 +2,7 @@
 
 - clean:
     ~/.config:
+    ~/.yt-dlp:
 
 - defaults:
     link:
@@ -26,4 +27,5 @@
     ~/.ssh/config:
         path: ssh/config
         force: false
+    ~/.yt-dlp/config: yt-dlp/config
     ~/.zshrc: zshrc
