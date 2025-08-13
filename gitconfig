@@ -51,3 +51,5 @@
 # If present, include local override options
 [include]
         path = ~/.gitconfig_local
+[pull]
+	rebase = true
